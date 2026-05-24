@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Levels & Coping Mechanisms | CSP Project</title>
+    <meta name="description" content="An interactive exploration of stress levels and coping mechanisms - Computer Science Project">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_new.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🧠 StressSense</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#levels">Levels</a></li>
+                <li><a href="#coping">Coping</a></li>
+                <li><a href="#breathing">Breathing</a></li>
+                <li><a href="#game">Game</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#tracker">Tracker</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tag">CSP Project</p>
+            <h1>Stress Levels <span class="gradient-text">&amp;</span> Coping Mechanisms</h1>
+            <p class="hero-desc">Understanding how stress affects our mind and body, and discovering effective strategies to manage it for a healthier, happier life.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Explore Now</a>
+                <a href="#quiz" class="btn btn-outline">Take Self-Check</a>
+            </div>
+            <div class="hero-stats-row">
+                <div class="hero-stat"><span class="hero-stat-num" data-target="77">0</span>%<p>of people experience stress that affects their physical health</p></div>
+                <div class="hero-stat"><span class="hero-stat-num" data-target="73">0</span>%<p>report stress impacts their mental health</p></div>
+                <div class="hero-stat"><span class="hero-stat-num" data-target="48">0</span>%<p>say stress has a negative impact on sleep</p></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"><div class="wheel"></div></div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- About Stress -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Understanding</p>
+                <h2>What is <span class="gradient-text">Stress</span>?</h2>
+                <p class="section-desc">Stress is the body's response to any demand or challenge. It can be triggered by both good and bad experiences.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card fade-in" style="--delay:0.1s">
+                    <div class="about-icon">⚡</div>
+                    <h3>Acute Stress</h3>
+                    <p>Short-term stress that goes away quickly. It helps you manage dangerous situations. Everyone experiences acute stress from time to time.</p>
+                </div>
+                <div class="about-card fade-in" style="--delay:0.2s">
+                    <div class="about-icon">🔄</div>
+                    <h3>Episodic Acute Stress</h3>
+                    <p>When acute stress happens frequently. People who always seem to be in a rush or frequently worry tend to experience this type.</p>
+                </div>
+                <div class="about-card fade-in" style="--delay:0.3s">
+                    <div class="about-icon">🔥</div>
+                    <h3>Chronic Stress</h3>
+                    <p>Stress that lasts for a long period of time. It can stem from poverty, dysfunctional families, or unhappy marriages and can be very harmful.</p>
+                </div>
+                <div class="about-card fade-in" style="--delay:0.4s">
+                    <div class="about-icon">✨</div>
+                    <h3>Eustress (Good Stress)</h3>
+                    <p>Positive stress that motivates and focuses energy. It's short-term and feels exciting. It improves performance and is perceived as within coping abilities.</p>
+                </div>
+            </div>
+            <div class="causes-section fade-in">
+                <h3>Common Causes of Stress</h3>
+                <div class="causes-grid">
+                    <div class="cause-item"><span>📚</span> Academic Pressure</div>
+                    <div class="cause-item"><span>💼</span> Work Demands</div>
+                    <div class="cause-item"><span>💰</span> Financial Issues</div>
+                    <div class="cause-item"><span>❤️</span> Relationship Problems</div>
+                    <div class="cause-item"><span>🏥</span> Health Concerns</div>
+                    <div class="cause-item"><span>🌍</span> World Events</div>
+                    <div class="cause-item"><span>📱</span> Social Media</div>
+                    <div class="cause-item"><span>⏰</span> Time Pressure</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivational Quotes Section -->
+    <section id="quotes">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Inspiration</p>
+                <h2>Daily <span class="gradient-text">Quotes</span></h2>
+                <p class="section-desc">Motivational wisdom to help you manage stress and stay positive.</p>
+            </div>
+            <div class="quotes-container fade-in">
+                <div class="quote-card">
+                    <div class="quote-marks">"</div>
+                    <p class="quote-text" id="quoteText">The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
+                    <p class="quote-author" id="quoteAuthor">— Nelson Mandela</p>
+                </div>
+                <div class="quotes-controls">
+                    <button class="quote-nav quote-prev" id="quotePrev" aria-label="Previous quote">←</button>
+                    <div class="quote-dots" id="quoteDots"></div>
+                    <button class="quote-nav quote-next" id="quoteNext" aria-label="Next quote">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stress Timeline Section -->
+    <section id="timeline">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">History</p>
+                <h2>Stress <span class="gradient-text">Timeline</span></h2>
+                <p class="section-desc">How our understanding of stress has evolved over time.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-item timeline-left fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1914</div>
+                        <h4>Cannon's Fight-or-Flight</h4>
+                        <p>Walter Cannon describes the physiological response to stress, laying the foundation for modern stress research.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+                <div class="timeline-item timeline-right fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1936</div>
+                        <h4>Selye's General Adaptation Syndrome</h4>
+                        <p>Hans Selye introduces the concept of stress and the three stages of adaptation to stressors.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1960s</div>
+                        <h4>Stress & Illness Connection</h4>
+                        <p>Research reveals the link between chronic stress and various diseases like hypertension and heart disease.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+                <div class="timeline-item timeline-right fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1980s</div>
+                        <h4>Mind-Body Medicine Emerges</h4>
+                        <p>Mindfulness and meditation gain scientific validation as effective stress-reduction techniques.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000s</div>
+                        <h4>Digital Age Stress</h4>
+                        <p>Studies emerge on social media-induced anxiety, screen time effects, and digital wellness importance.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+                <div class="timeline-item timeline-right fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020+</div>
+                        <h4>Pandemic & Mental Health</h4>
+                        <p>Global focus on mental health, remote work stress, and accessible wellness resources becomes mainstream.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stress Levels -->
+    <section id="levels">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Measurement</p>
+                <h2>Stress <span class="gradient-text">Levels</span></h2>
+                <p class="section-desc">Stress can be measured on a spectrum from low to severe. Understanding your level helps determine the right coping strategy.</p>
+            </div>
+            <div class="levels-visual fade-in">
+                <div class="level-card level-low">
+                    <div class="level-meter"><div class="level-fill" data-level="25"></div></div>
+                    <h3>Low Stress</h3>
+                    <div class="level-badge">Manageable</div>
+                    <ul>
+                        <li>Mild tension or nervousness</li>
+                        <li>Slight difficulty concentrating</li>
+                        <li>Minor irritability</li>
+                        <li>Generally still functional</li>
+                    </ul>
+                </div>
+                <div class="level-card level-moderate">
+                    <div class="level-meter"><div class="level-fill" data-level="50"></div></div>
+                    <h3>Moderate Stress</h3>
+                    <div class="level-badge">Caution</div>
+                    <ul>
+                        <li>Frequent headaches or muscle tension</li>
+                        <li>Difficulty sleeping</li>
+                        <li>Mood swings and anxiety</li>
+                        <li>Decreased productivity</li>
+                    </ul>
+                </div>
+                <div class="level-card level-high">
+                    <div class="level-meter"><div class="level-fill" data-level="75"></div></div>
+                    <h3>High Stress</h3>
+                    <div class="level-badge">Warning</div>
+                    <ul>
+                        <li>Chronic fatigue and exhaustion</li>
+                        <li>Withdrawal from activities</li>
+                        <li>Significant anxiety or depression</li>
+                        <li>Physical health problems</li>
+                    </ul>
+                </div>
+                <div class="level-card level-severe">
+                    <div class="level-meter"><div class="level-fill" data-level="95"></div></div>
+                    <h3>Severe / Burnout</h3>
+                    <div class="level-badge">Critical</div>
+                    <ul>
+                        <li>Complete emotional exhaustion</li>
+                        <li>Feeling of helplessness</li>
+                        <li>Inability to function normally</li>
+                        <li>Serious health complications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coping Mechanisms -->
+    <section id="coping">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Strategies</p>
+                <h2>Coping <span class="gradient-text">Mechanisms</span></h2>
+                <p class="section-desc">Not all coping strategies are equal. Learn the difference between healthy and unhealthy approaches.</p>
+            </div>
+            <div class="coping-comparison fade-in">
+                <div class="coping-col coping-healthy">
+                    <div class="coping-header healthy-header">
+                        <span>✅</span>
+                        <h3>Healthy Coping</h3>
+                    </div>
+                    <div class="coping-list">
+                        <div class="coping-item">
+                            <div class="coping-item-icon">🧘</div>
+                            <div><h4>Meditation & Mindfulness</h4><p>Practicing being present reduces anxiety and promotes calm. Even 10 minutes daily can make a difference.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">🏃</div>
+                            <div><h4>Physical Exercise</h4><p>Regular exercise releases endorphins, natural mood lifters that also help with sleep and self-esteem.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">💬</div>
+                            <div><h4>Talking to Someone</h4><p>Sharing feelings with friends, family, or a counselor can provide relief and new perspectives.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">📝</div>
+                            <div><h4>Journaling</h4><p>Writing thoughts down helps process emotions and identify stress patterns and triggers.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">😴</div>
+                            <div><h4>Adequate Sleep</h4><p>Getting 7-9 hours of quality sleep improves stress resilience and emotional regulation.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">🎨</div>
+                            <div><h4>Creative Outlets</h4><p>Art, music, or hobbies provide a healthy distraction and channel for emotional expression.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coping-vs fade-in">VS</div>
+                <div class="coping-col coping-unhealthy">
+                    <div class="coping-header unhealthy-header">
+                        <span>❌</span>
+                        <h3>Unhealthy Coping</h3>
+                    </div>
+                    <div class="coping-list">
+                        <div class="coping-item">
+                            <div class="coping-item-icon">🍷</div>
+                            <div><h4>Substance Use</h4><p>Alcohol, drugs, or excessive caffeine may provide temporary relief but worsen stress long-term.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">🍔</div>
+                            <div><h4>Emotional Eating</h4><p>Overeating or undereating as a response to stress can lead to health issues and guilt cycles.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">📱</div>
+                            <div><h4>Excessive Screen Time</h4><p>Doom-scrolling or binge-watching to avoid dealing with stressors only delays the problem.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">😤</div>
+                            <div><h4>Aggression</h4><p>Lashing out at others or bottling up anger damages relationships and increases tension.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">🚫</div>
+                            <div><h4>Avoidance</h4><p>Ignoring problems or procrastinating allows stressors to build up and become overwhelming.</p></div>
+                        </div>
+                        <div class="coping-item">
+                            <div class="coping-item-icon">😶</div>
+                            <div><h4>Social Isolation</h4><p>Withdrawing from friends and family removes support systems when they're needed most.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guided Breathing Exercise -->
+    <section id="breathing">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Relaxation</p>
+                <h2>Guided <span class="gradient-text">Breathing</span></h2>
+                <p class="section-desc">Use animated breathing cycles to calm your mind and body. Choose a technique that works for you.</p>
+            </div>
+            <div class="breathing-container fade-in">
+                <div class="breathing-technique-selector">
+                    <button class="technique-btn active" data-technique="calm">🌬️ Calm Breathing</button>
+                    <button class="technique-btn" data-technique="box">📦 Box Breathing</button>
+                    <button class="technique-btn" data-technique="478">🔄 4-7-8 Breathing</button>
+                </div>
+                <div class="breathing-visual">
+                    <div class="breathing-circle" id="breathingCircle">
+                        <div class="breathing-center">
+                            <p class="breathing-phase" id="breathingPhase">Inhale</p>
+                            <p class="breathing-count" id="breathingCount">4</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="breathing-info">
+                    <p class="technique-desc" id="techniqueDesc">Calm breathing: Inhale for 4 seconds, exhale for 6 seconds. Simple and effective.</p>
+                    <p class="cycle-counter">Cycles: <span id="cycleCount">0</span></p>
+                </div>
+                <div class="breathing-controls">
+                    <button class="btn btn-primary" id="breathingToggle">Start Breathing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bubble Pop Game -->
+    <section id="game">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Fun Activity</p>
+                <h2>Bubble Pop <span class="gradient-text">Game</span></h2>
+                <p class="section-desc">A quick, fun way to relieve stress. Pop bubbles for 30 seconds and see your score!</p>
+            </div>
+            <div class="game-container fade-in">
+                <div class="game-info">
+                    <div class="game-stat">Score: <span id="gameScore">0</span></div>
+                    <div class="game-stat">Time: <span id="gameTimer">30</span>s</div>
+                </div>
+                <canvas id="gameCanvas" class="game-canvas"></canvas>
+                <button class="btn btn-primary" id="gameStart">Start Game</button>
+                <p class="game-instruction">Click or tap bubbles to pop them! More bubbles appear as time runs out.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mood Tracker / Daily Journal -->
+    <section id="tracker">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Self-Care</p>
+                <h2>Mood <span class="gradient-text">Tracker</span></h2>
+                <p class="section-desc">Track your daily mood and journaling entries. See patterns in your stress levels.</p>
+            </div>
+            <div class="tracker-container fade-in">
+                <div class="mood-selector">
+                    <p>How are you feeling today?</p>
+                    <div class="mood-buttons">
+                        <button class="mood-btn" data-mood="5" title="Very Happy">😄</button>
+                        <button class="mood-btn" data-mood="4" title="Happy">😊</button>
+                        <button class="mood-btn" data-mood="3" title="Neutral">😐</button>
+                        <button class="mood-btn" data-mood="2" title="Sad">😕</button>
+                        <button class="mood-btn" data-mood="1" title="Very Sad">😢</button>
+                    </div>
+                </div>
+                <div class="journal-section">
+                    <textarea id="journalEntry" placeholder="Write about your day, feelings, or what caused your mood..." maxlength="500"></textarea>
+                    <div class="journal-controls">
+                        <span id="charCount">0/500</span>
+                        <button class="btn btn-primary" id="journalSubmit">Save Entry</button>
+                    </div>
+                </div>
+                <div class="tracker-chart">
+                    <h4>Last 7 Days</h4>
+                    <div class="mood-chart" id="moodChart"></div>
+                </div>
+                <div class="tracker-history">
+                    <h4>Recent Entries</h4>
+                    <div class="history-list" id="historyList"></div>
+                </div>
+                <button class="btn btn-outline" id="trackerClear">Clear All Data</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section id="stats">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Data</p>
+                <h2>Stress <span class="gradient-text">Statistics</span></h2>
+                <p class="section-desc">Key data points that highlight the impact of stress in modern life.</p>
+            </div>
+            <div class="stats-grid fade-in">
+                <div class="stat-card">
+                    <div class="stat-chart">
+                        <svg viewBox="0 0 120 120" class="circle-chart">
+                            <circle cx="60" cy="60" r="50" class="circle-bg"/>
+                            <circle cx="60" cy="60" r="50" class="circle-fg" data-percent="83" style="--color:#6C63FF"/>
+                        </svg>
+                        <span class="stat-value" data-target="83">0</span>%
+                    </div>
+                    <h4>US Workers</h4>
+                    <p>suffer from work-related stress</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-chart">
+                        <svg viewBox="0 0 120 120" class="circle-chart">
+                            <circle cx="60" cy="60" r="50" class="circle-bg"/>
+                            <circle cx="60" cy="60" r="50" class="circle-fg" data-percent="75" style="--color:#FF6B8A"/>
+                        </svg>
+                        <span class="stat-value" data-target="75">0</span>%
+                    </div>
+                    <h4>Students</h4>
+                    <p>report moderate to high stress levels</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-chart">
+                        <svg viewBox="0 0 120 120" class="circle-chart">
+                            <circle cx="60" cy="60" r="50" class="circle-bg"/>
+                            <circle cx="60" cy="60" r="50" class="circle-fg" data-percent="43" style="--color:#4ECDC4"/>
+                        </svg>
+                        <span class="stat-value" data-target="43">0</span>%
+                    </div>
+                    <h4>Adults</h4>
+                    <p>report stress-related health issues</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-chart">
+                        <svg viewBox="0 0 120 120" class="circle-chart">
+                            <circle cx="60" cy="60" r="50" class="circle-bg"/>
+                            <circle cx="60" cy="60" r="50" class="circle-fg" data-percent="60" style="--color:#FFD93D"/>
+                        </svg>
+                        <span class="stat-value" data-target="60">0</span>%
+                    </div>
+                    <h4>Teens</h4>
+                    <p>feel overwhelmed by stress regularly</p>
+                </div>
+            </div>
+            <!-- Bar Chart -->
+            <div class="bar-chart-section fade-in">
+                <h3>Top Causes of Stress Among Young Adults</h3>
+                <div class="bar-chart">
+                    <div class="bar-row"><span class="bar-label">Academic Pressure</span><div class="bar-track"><div class="bar-fill" data-width="82" style="--bar-color:#6C63FF"></div></div><span class="bar-val">82%</span></div>
+                    <div class="bar-row"><span class="bar-label">Future Uncertainty</span><div class="bar-track"><div class="bar-fill" data-width="71" style="--bar-color:#FF6B8A"></div></div><span class="bar-val">71%</span></div>
+                    <div class="bar-row"><span class="bar-label">Financial Concerns</span><div class="bar-track"><div class="bar-fill" data-width="65" style="--bar-color:#4ECDC4"></div></div><span class="bar-val">65%</span></div>
+                    <div class="bar-row"><span class="bar-label">Social Media</span><div class="bar-track"><div class="bar-fill" data-width="58" style="--bar-color:#FFD93D"></div></div><span class="bar-val">58%</span></div>
+                    <div class="bar-row"><span class="bar-label">Family Issues</span><div class="bar-track"><div class="bar-fill" data-width="47" style="--bar-color:#FF8A5C"></div></div><span class="bar-val">47%</span></div>
+                    <div class="bar-row"><span class="bar-label">Health Worries</span><div class="bar-track"><div class="bar-fill" data-width="39" style="--bar-color:#A78BFA"></div></div><span class="bar-val">39%</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips -->
+    <section id="tips">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Actionable</p>
+                <h2>Quick Stress <span class="gradient-text">Relief Tips</span></h2>
+                <p class="section-desc">Simple techniques you can use right now to lower your stress levels.</p>
+            </div>
+            <div class="tips-grid fade-in">
+                <div class="tip-card"><div class="tip-num">01</div><h4>Deep Breathing</h4><p>Inhale for 4 seconds, hold for 7, exhale for 8. Repeat 3-4 times to activate the calming response.</p></div>
+                <div class="tip-card"><div class="tip-num">02</div><h4>5-4-3-2-1 Grounding</h4><p>Notice 5 things you see, 4 you touch, 3 you hear, 2 you smell, and 1 you taste.</p></div>
+                <div class="tip-card"><div class="tip-num">03</div><h4>Progressive Relaxation</h4><p>Tense each muscle group for 5 seconds, then release. Work from toes to head.</p></div>
+                <div class="tip-card"><div class="tip-num">04</div><h4>Take a Walk</h4><p>A 10-minute walk, especially in nature, can significantly reduce cortisol levels.</p></div>
+                <div class="tip-card"><div class="tip-num">05</div><h4>Listen to Music</h4><p>Calming music can lower blood pressure, heart rate, and anxiety levels.</p></div>
+                <div class="tip-card"><div class="tip-num">06</div><h4>Practice Gratitude</h4><p>Write 3 things you're grateful for. This shifts focus from stressors to positives.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz / Self Check -->
+    <section id="quiz">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-tag">Interactive</p>
+                <h2>Stress <span class="gradient-text">Self-Check</span></h2>
+                <p class="section-desc">Answer these quick questions to get a general idea of your current stress level. (Not a medical diagnosis.)</p>
+            </div>
+            <div class="quiz-container fade-in" id="quizContainer">
+                <div class="quiz-progress"><div class="quiz-progress-bar" id="quizProgressBar"></div></div>
+                <div id="quizContent">
+                    <!-- Questions injected by JS -->
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-outline" id="quizPrev" disabled>← Previous</button>
+                    <span id="quizStep">1 / 10</span>
+                    <button class="btn btn-primary" id="quizNext">Next →</button>
+                </div>
+            </div>
+            <div class="quiz-result" id="quizResult" style="display:none">
+                <div class="result-meter"><div class="result-fill" id="resultFill"></div></div>
+                <h3 id="resultTitle"></h3>
+                <p id="resultDesc"></p>
+                <div class="result-share">
+                    <button class="btn btn-primary" id="shareResult">Share Results</button>
+                    <button class="btn btn-outline" id="copyResultLink">Copy Link</button>
+                </div>
+                <div class="result-solutions" id="resultSolutions">
+                    <h4>✨ Personalized Recommendations</h4>
+                    <div class="solutions-grid" id="solutionsGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="quizRetake">Retake Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambient Sound Player (Floating Widget) -->
+    <div class="sound-widget" id="soundWidget">
+        <button class="sound-toggle" id="soundToggle" title="Ambient Sounds">🔊</button>
+        <div class="sound-panel" id="soundPanel" style="display:none;">
+            <div class="sound-header">
+                <h4>Ambient Sounds</h4>
+                <button class="sound-close" id="soundClose">✕</button>
+            </div>
+            <div class="sound-controls">
+                <button class="sound-option" data-sound="rain">🌧️ Rain</button>
+                <button class="sound-option" data-sound="ocean">🌊 Ocean</button>
+                <button class="sound-option" data-sound="forest">🌲 Forest</button>
+                <button class="sound-option" data-sound="lofi">🎵 Lo-fi</button>
+                <button class="sound-option" data-sound="white">⚪ White Noise</button>
+            </div>
+            <div class="sound-playing" id="soundPlaying"></div>
+            <div class="master-volume">
+                <label>Master Volume</label>
+                <input type="range" id="masterVolume" min="0" max="100" value="50" class="volume-slider">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>🧠 StressSense</h3>
+                    <p>A CSP Project dedicated to understanding stress and promoting healthy coping mechanisms for a better life.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About Stress</a>
+                    <a href="#levels">Stress Levels</a>
+                    <a href="#coping">Coping Strategies</a>
+                    <a href="#tips">Relief Tips</a>
+                </div>
+                <div class="footer-resources">
+                    <h4>Resources</h4>
+                    <a href="https://www.who.int/news-room/questions-and-answers/item/stress" target="_blank">WHO - Stress</a>
+                    <a href="https://www.apa.org/topics/stress" target="_blank">APA - Stress</a>
+                    <a href="https://www.nimh.nih.gov/health/publications/stress" target="_blank">NIMH - Stress</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StressSense | CSP Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+</body>
+</html>
+
+<!-- Mobile Optimized Version -->
